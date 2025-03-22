@@ -1,0 +1,54 @@
+/* Efek Confetti */
+.confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    opacity: 0.7;
+    border-radius: 50%;
+    animation: confetti-fall linear infinite;
+}
+
+@keyframes confetti-fall {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(100vh) rotate(720deg); }
+}
+
+/* Animasi Muncul Perlahan */
+.message {
+    opacity: 0;
+    transition: opacity 3s;
+}
+
+/* Efek Kembang Api */
+.firework {
+    position: fixed;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    background-color: yellow;
+    border-radius: 50%;
+    animation: explode 1s ease-out;
+}
+
+@keyframes explode {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(10); opacity: 0; }
+}
+
+/* Slideshow Foto */
+.photo img {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s;
+}
